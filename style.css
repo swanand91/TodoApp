@@ -10,7 +10,6 @@
     min-height: 100vh;
     background: linear-gradient(135deg, #1550c7, #6a0c82);
     padding: 10px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,13 +49,14 @@
 }
 
 input {
-    flex: 1 1 200px;
+    flex: 1 1 auto;
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
     font-size: 14px;
     min-width: 0;
+    word-wrap: break-word;
 }
 
 button {
@@ -117,13 +117,22 @@ ul li span {
 ul li span:hover {
     background: #edeef0;
 }
-@media (max-width: 400px) {
+
+
+@media (max-width: 480px) {
     .row {
         flex-direction: column;
         align-items: stretch;
     }
 
+    input {
+        width: 100%;
+        font-size: 16px;
+    }
+
     button {
         width: 100%;
+        padding: 14px 0;
+        font-size: 16px;
     }
 }
